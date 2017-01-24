@@ -1,0 +1,26 @@
+{
+  "name": "file-case",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "bin": {
+    "file-case": "dist/bin.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "7.0.0",
+    "nodemon": "1.11.0",
+    "ts-node": "2.0.0",
+    "typescript": "2.1.5"
+  },
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
+    "build": "npm run clean &&  tsc --version && tsc -p ./src",
+    "clean": "rm -rf dist",
+    "test": "nodemon --exec ./node_modules/.bin/ts-node ./tests/index.ts",
+    "tsc": "tsc"
+  }
+}

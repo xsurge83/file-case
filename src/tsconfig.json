@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "../dist",
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "inlineSources": true
+  },
+  "exclude": ["../dist"]
+}
