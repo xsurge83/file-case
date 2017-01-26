@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import  * as path from 'path';
-import fileCase = require("./index");
-let argv = process.argv.slice(2);
+import * as path from 'path';
+import fileCase from './index';
 
+let argv = process.argv.slice(2);
 let directory = __dirname;
 
 if(argv[0]){

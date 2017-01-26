@@ -4,7 +4,6 @@
  * Resources:
  * // https://github.com/jergason/recursive-readdir
  */
-import * as fs from 'fs';
 import {readDir} from './read-dir'
 import {changePathCase} from "./change-path-case";
 
@@ -14,4 +13,4 @@ function fileCase(dirName: string) {
     })
 }
 
-export = fileCase;
+export default fileCase;
