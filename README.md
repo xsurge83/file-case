@@ -1,6 +1,25 @@
 #### TODO
+- [ ] add testing 
+- [ ] add converters 
 - [ ] camelcase
 - [ ] snakecase
 - [ ] dashcase
 - [ ] pascalcase
-- [ ] add testing framework
+- [ ] host on travis 
+
+#### Local Development 
+
+Development
+-----------
+
+Requirements:
+
+- `node` 
+
+
+#### Install Locally
+
+```bash
+npm run build 
+npm install -g 
+```
