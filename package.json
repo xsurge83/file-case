@@ -1,7 +1,7 @@
 {
   "name": "file-case",
   "version": "1.0.0",
-  "description": "",
+  "description": "- [ ] camelcase - [ ] snakecase - [ ] dashcase - [ ] pascalcase - [ ] add testing framework",
   "main": "dist/index.js",
   "bin": {
     "file-case": "dist/bin.js"
@@ -22,5 +22,21 @@
     "clean": "rm -rf dist",
     "test": "nodemon --exec ./node_modules/.bin/ts-node ./tests/index.ts",
     "tsc": "tsc"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "typescript": "2.1.5",
+    "ts-node": "2.0.0",
+    "nodemon": "1.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xsurge83/file-case.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xsurge83/file-case/issues"
+  },
+  "homepage": "https://github.com/xsurge83/file-case#readme"
 }
