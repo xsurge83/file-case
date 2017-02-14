@@ -13,4 +13,4 @@
 circle.yml
 tslint.json
 /src/
-/tests/
+/test/
