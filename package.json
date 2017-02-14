@@ -7,9 +7,11 @@
     "file-case": "dist/bin.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "sergey <sshteyn@apple.com>",
   "license": "ISC",
   "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/mocha": "^2.2.39",
     "@types/node": "7.0.0",
     "nodemon": "1.11.0",
     "ts-node": "2.0.0",
@@ -20,21 +22,19 @@
     "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
     "build": "npm run clean &&  tsc --version && tsc -p ./src",
     "clean": "rm -rf dist",
-    "test": "nodemon --exec ./node_modules/.bin/ts-node ./tests/index.ts",
+    "test": "npm run clean && npm run build  && mocha ./dist/test --recursive",
     "tsc": "tsc"
   },
   "directories": {
     "test": "tests"
   },
   "dependencies": {
-    "typescript": "2.1.5",
-    "ts-node": "2.0.0",
-    "nodemon": "1.11.0"
+    "chai": "^3.5.0",
+    "chai-spies": "^0.7.1",
+    "install": "^0.8.4",
+    "mocha": "^3.2.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xsurge83/file-case.git"
-  },
+  "repository": "git+https://github.com/xsurge83/file-case.git",
   "bugs": {
     "url": "https://github.com/xsurge83/file-case/issues"
   },

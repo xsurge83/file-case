@@ -4,7 +4,7 @@ export interface FileChangeOptions {
     baseDirectory: string
 }
 
-export const changePathCase = (file: string, options?: FileChangeOptions): string => {
+export const changePathCase = (file: string, convertToCase = 'snake', options?: FileChangeOptions): string => {
     let result: string = file;
     if (file) {
         if (options) {
@@ -12,9 +12,12 @@ export const changePathCase = (file: string, options?: FileChangeOptions): strin
                 file = file.replace(options.baseDirectory, '');
             }
         }
+
+        const caseConverter = caseConverters[convertToCase];
+
         result = file
             .split('/')
-            .map((val) => val.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase())
+            .map((val) => caseConverter(val).toLowerCase())
             .join('/');
 
         if (options) {
@@ -25,3 +28,7 @@ export const changePathCase = (file: string, options?: FileChangeOptions): strin
     }
     return result;
 };
+
+const caseConverters = {
+  'snake' : (path: string) => path.replace(/([a-z])([A-Z])/g, '$1-$2')
+} as any;

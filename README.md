@@ -13,7 +13,7 @@ Development
 -----------
 
 Requirements:
-
+-
 - `node` 
 
 
@@ -23,3 +23,6 @@ Requirements:
 npm run build 
 npm install -g 
 ```
+
+
+use codelyzer for typescript reference 

@@ -4,12 +4,12 @@
  * Resources:
  * // https://github.com/jergason/recursive-readdir
  */
-import {readDir} from './read-dir'
-import {changePathCase} from "./change-path-case";
+import { readDirAndUpdateCasing } from './read-dir'
+import { changePathCase } from './change-path-case';
 
-function fileCase(dirName: string) {
-    readDir(dirName, changePathCase, (err)=>{
-        console.log('done');
+function fileCase(dirName: string, convertToCase = 'snake') {
+    readDirAndUpdateCasing(dirName, (file: string) => {
+        return changePathCase(file, convertToCase)
     })
 }
 
