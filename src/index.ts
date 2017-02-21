@@ -12,5 +12,4 @@ function fileCase(dirName: string, convertToCase = 'snake') {
         return changePathCase(file, convertToCase)
     })
 }
-
 export default fileCase;

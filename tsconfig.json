@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "experimentalDecorators": true,
-    "target": "es5",
-    "module": "commonjs",
-    "declaration": false,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "lib": ["es6", "es2015", "dom"],
-    "noLib": false,
     "outDir": "./dist",
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "inlineSources": true,
     "typeRoots": [
       "./node_modules/@types",
       "./node_modules"

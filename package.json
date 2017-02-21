@@ -4,7 +4,7 @@
   "description": "- [ ] camelcase - [ ] snakecase - [ ] dashcase - [ ] pascalcase - [ ] add testing framework",
   "main": "dist/index.js",
   "bin": {
-    "file-case": "dist/bin.js"
+    "file-case": "dist/src/bin.js"
   },
   "keywords": [],
   "author": "sergey <sshteyn@apple.com>",
@@ -20,7 +20,7 @@
   "scripts": {
     "start": "npm run build:live",
     "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts",
-    "build": "npm run clean &&  tsc --version && tsc -p ./src",
+    "build": "npm run clean && tsc --version && tsc -p .",
     "clean": "rm -rf dist",
     "test": "npm run clean && npm run build  && mocha ./dist/test --recursive",
     "tsc": "tsc"
